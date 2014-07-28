@@ -42,6 +42,11 @@ class OpcMessageRoute extends RouteBuilder {
 					String[] parts = key.split("\\.");
 					key = parts[parts.length-1];
 					newBody[key] = item.value
+					//Change the name of the current tag
+					if(key.equals("Int2")){
+						newBody['Core Temperature'] = item.value
+
+					}
 				}
 				exchange.getIn().setBody(newBody);
 			}.process { Exchange exchange ->
