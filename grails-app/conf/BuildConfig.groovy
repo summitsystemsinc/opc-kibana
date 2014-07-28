@@ -58,6 +58,8 @@ grails.project.dependency.resolution = {
 		runtime "com.summit.camel.opc:camel-opc_da2:1.0-SNAPSHOT"
 		runtime 'org.apache.camel:camel-gson:2.13.2'
 		runtime 'org.apache.camel:camel-elasticsearch:2.13.2'
+		
+		runtime "org.mitre.dsmiley.httpproxy:smiley-http-proxy-servlet:1.4"
     }
 
     plugins {
