@@ -46,7 +46,9 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.jboss.com/maven2/"
 		mavenRepo "http://repo.grails.org/grails/core"
 		//Repository for camel-opc
-		mavenRepo "http://repository-magno32.forge.cloudbees.com/snapshot/"
+		mavenRepo ("https://oss.sonatype.org/content/repositories/snapshots"){
+			updatePolicy 'always'
+		}
     }
 
     dependencies {
@@ -55,7 +57,7 @@ grails.project.dependency.resolution = {
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
 
         compile "org.springframework:spring-orm:$springVersion"
-		runtime "com.summit.camel.opc:camel-opc_da2:1.0-SNAPSHOT"
+		runtime "com.summitsystemsinc.camel.opc:camel-opc_da2:1.0-SNAPSHOT"
 		runtime 'org.apache.camel:camel-gson:2.13.2'
 		runtime 'org.apache.camel:camel-elasticsearch:2.13.2'
 		
